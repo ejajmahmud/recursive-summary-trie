@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recursive-summary-trie"
+version = "0.1.0"
+description = "Prefix trie indexing conversation history in hierarchical depth tiers (summary -> chapter -> verbatim)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+recursive-summary-trie = "recursive_summary_trie.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["recursive_summary_trie*"]
